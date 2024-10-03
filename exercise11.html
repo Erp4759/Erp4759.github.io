@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas Exercise</title>
+    <title>Circle and Rectangle</title>
 </head>
 <body>
 
@@ -13,32 +13,20 @@
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "red";
-        ctx.fillRect(10, 10, 100, 50);
+        // Draw a blue rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 200, 100);
 
-        var gradient = ctx.createLinearGradient(150, 10, 250, 60);
-        gradient.addColorStop(0, "blue");
-        gradient.addColorStop(1, "green");
-        ctx.fillStyle = gradient;
-        ctx.fillRect(150, 10, 100, 50);
-
-        var gradient2 = ctx.createLinearGradient(300, 10, 400, 60);
-        gradient2.addColorStop(0, "purple");
-        gradient2.addColorStop(0.5, "yellow");
-        gradient2.addColorStop(1, "orange");
-        ctx.fillStyle = gradient2;
-        ctx.fillRect(300, 10, 100, 50);
-
-        var textGradient = ctx.createLinearGradient(10, 200, 300, 200);
-        textGradient.addColorStop("0", "red");
-        textGradient.addColorStop("0.5", "green");
-        textGradient.addColorStop("1.0", "blue");
-        ctx.font = "30px Arial";
-        ctx.fillStyle = textGradient;
-        ctx.fillText("Multicolor Text", 10, 200);
+        // Draw a yellow circle with a red border that overlaps the rectangle
+        ctx.beginPath();
+        ctx.arc(200, 100, 60, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "red";
+        ctx.stroke();
 
     </script>
 
 </body>
 </html>
-
