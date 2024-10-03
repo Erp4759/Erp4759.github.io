@@ -7,20 +7,20 @@
 </head>
 <body>
 
-    <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;"></canvas>
+    <canvas id="myCanvas" width="500" height="300"></canvas>
 
     <script>
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
 
         ctx.fillStyle = "blue";
-        ctx.fillRect(50, 50, 300, 150);
+        ctx.fillRect(50, 50, 200, 150);
 
         ctx.beginPath();
-        ctx.arc(250, 125, 75, 0, 2 * Math.PI, false); 
+        ctx.arc(250, 125, 75, 0, 2 * Math.PI, false);
         ctx.fillStyle = "yellow";
         ctx.fill();
-        ctx.lineWidth = 10;  
+        ctx.lineWidth = 10;
         ctx.strokeStyle = "red";
         ctx.stroke();
 
