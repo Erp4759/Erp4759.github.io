@@ -13,16 +13,14 @@
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
 
-        // Draw a blue rectangle
         ctx.fillStyle = "blue";
         ctx.fillRect(50, 50, 300, 150);
 
-        // Draw a yellow circle with a red border that overlaps the rectangle
         ctx.beginPath();
-        ctx.arc(250, 125, 75, 0, 2 * Math.PI, false); // Adjusted positioning and size
+        ctx.arc(250, 125, 75, 0, 2 * Math.PI, false); 
         ctx.fillStyle = "yellow";
         ctx.fill();
-        ctx.lineWidth = 10;  // Thicker border
+        ctx.lineWidth = 10;  
         ctx.strokeStyle = "red";
         ctx.stroke();
 
