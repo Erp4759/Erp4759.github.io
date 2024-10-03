@@ -15,14 +15,14 @@
 
         // Draw a blue rectangle
         ctx.fillStyle = "blue";
-        ctx.fillRect(50, 50, 200, 100);
+        ctx.fillRect(50, 50, 300, 150);
 
         // Draw a yellow circle with a red border that overlaps the rectangle
         ctx.beginPath();
-        ctx.arc(200, 100, 60, 0, 2 * Math.PI, false);
+        ctx.arc(250, 125, 75, 0, 2 * Math.PI, false); // Adjusted positioning and size
         ctx.fillStyle = "yellow";
         ctx.fill();
-        ctx.lineWidth = 5;
+        ctx.lineWidth = 10;  // Thicker border
         ctx.strokeStyle = "red";
         ctx.stroke();
 
