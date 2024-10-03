@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Viacheslav Kartushin</title>
+    <title>Erik Paperniuk</title>
 </head>
 <body>
 <canvas id="myCanvas" width="300" height="300"></canvas>
 <script>
     var canvas = document.getElementById("myCanvas");
     var context = canvas.getContext("2d");
+    
     context.fillStyle = "blue";
-    context.fillRect(20, 20, 150, 150);
+    context.fillRect(30, 30, 140, 140);
+    
     context.lineWidth = 5;
     context.strokeStyle = "black";
-    context.strokeRect(20, 20, 150, 150);
+    context.strokeRect(30, 30, 140, 140);
+    
     context.beginPath();
-    var circleRadius = 60;
-    context.arc(170, 95, circleRadius, 0, 2 * Math.PI);
+    var circleRadius = 65;
+    context.arc(200, 100, circleRadius, 0, 2 * Math.PI);
+    
     context.fillStyle = "yellow";
     context.fill();
+    
     context.strokeStyle = "red";
-    context.lineWidth = 5;
+    context.lineWidth = 7;
     context.stroke();
 </script>
 </body>
